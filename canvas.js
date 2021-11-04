@@ -18,6 +18,7 @@ sky.width = w;
 sky.height = h;
 
 drawStatics();
+
 function init(duration){
   var requestID;
   var startTime = null;
@@ -48,7 +49,7 @@ function init(duration){
 animate();
 }
 
-init(2000);
+// init(2000);
 
 
 
@@ -150,21 +151,21 @@ function loadAndDrawImage(url, x, y, skewX, skewY){
     image.src = url;
 }
 function drawFences(){
-loadAndDrawImage("fence.svg", 0, 50*h/100-180,0,0);
-loadAndDrawImage("fence.svg", 0, 90*h/100-180,0,0);
-loadAndDrawImage("fence.svg", 50*w/100-100, 75*h/100-180,0,0);
-loadAndDrawImage("fence.svg", w-216, 50*h/100-180,0,0);
-loadAndDrawImage("fence.svg", w-216, 90*h/100-180,0,0);
+loadAndDrawImage("public/fence.svg", 0, 50*h/100-180,0,0);
+loadAndDrawImage("public/fence.svg", 0, 90*h/100-180,0,0);
+loadAndDrawImage("public/fence.svg", 50*w/100-100, 75*h/100-180,0,0);
+loadAndDrawImage("public/fence.svg", w-216, 50*h/100-180,0,0);
+loadAndDrawImage("public/fence.svg", w-216, 90*h/100-180,0,0);
 
 // Draw skewed fences on the left hand side
-loadAndDrawImage("fence.svg", 200, 50*h/100-260,0.4,0);
-loadAndDrawImage("fence.svg", 200, 90*h/100-100,-0.4,0);
+loadAndDrawImage("public/fence.svg", 200, 50*h/100-260,0.4,0);
+loadAndDrawImage("public/fence.svg", 200, 90*h/100-100,-0.4,0);
 
 // Draw skewed fences on the right hand side
-loadAndDrawImage("fence.svg", w-416, 50*h/100-420,0.4, 0);
-loadAndDrawImage("fence.svg", w-416, h-14,-0.4,0);
+loadAndDrawImage("public/fence.svg", w-416, 50*h/100-420,0.4, 0);
+loadAndDrawImage("public/fence.svg", w-416, h-14,-0.4,0);
 
 // Draw skewed fences in the center
-loadAndDrawImage("fence.svg", 55*w/100+20, 50*h/100-690,0.8, 0);
-loadAndDrawImage("fence.svg", 25*w/100+85, h+170,-0.8, 0);
+loadAndDrawImage("public/fence.svg", 55*w/100+20, 50*h/100-690,0.8, 0);
+loadAndDrawImage("public/fence.svg", 25*w/100+85, h+170,-0.8, 0);
 }
