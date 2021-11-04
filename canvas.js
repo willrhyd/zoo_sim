@@ -18,36 +18,36 @@ sky.width = w;
 sky.height = h;
 
 drawStatics();
-
-function init(duration){
-  var requestID;
-  var startTime = null;
-  var time ;
-  var animate = function(time) {
-    time = new Date().getTime();
-    if (startTime === null) {
-        startTime = time;
-   }
-   let progress = time - startTime;
-   sunCtx.clearRect(0, 0, canvas.width, canvas.height);
-   sunCtx.save();
-   sunCtx.translate(w/2, h/2);
-
-
-   sunCtx.rotate(((2 * Math.PI) * (progress/duration))  );
-   sunCtx.arc(w/2, h/2, 50, 0, 2 * Math.PI);
-
-   sunCtx.fillStyle= "#fce88b";
-   sunCtx.fill();
-   ctx.restore();
-   if (progress < duration ) {
-     requestAnimationFrame(animate);
-   } else{
-      cancelAnimationFrame(requestID);
-   }
- };
-animate();
-}
+// 
+// function init(duration){
+//   var requestID;
+//   var startTime = null;
+//   var time ;
+//   var animate = function(time) {
+//     time = new Date().getTime();
+//     if (startTime === null) {
+//         startTime = time;
+//    }
+//    let progress = time - startTime;
+//    sunCtx.clearRect(0, 0, canvas.width, canvas.height);
+//    sunCtx.save();
+//    sunCtx.translate(w/2, h/2);
+//
+//
+//    sunCtx.rotate(((2 * Math.PI) * (progress/duration))  );
+//    sunCtx.arc(w/2, h/2, 50, 0, 2 * Math.PI);
+//
+//    sunCtx.fillStyle= "#fce88b";
+//    sunCtx.fill();
+//    ctx.restore();
+//    if (progress < duration ) {
+//      requestAnimationFrame(animate);
+//    } else{
+//       cancelAnimationFrame(requestID);
+//    }
+//  };
+// animate();
+// }
 
 // init(2000);
 
