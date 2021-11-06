@@ -222,3 +222,10 @@ grid-row-start: 2;
 .hiddenButton{
   display: none;
 }
+
+#clock{
+  font-size: 3rem;
+  position: fixed;
+  right: 5%;
+  top: 2.5%;
+}
