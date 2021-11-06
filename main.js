@@ -23,10 +23,23 @@ document.getElementById("hour").addEventListener("click", function(event){
 updateHealthBars();
 });
 
-// Event listener for feeding button click and increast health by an RNG amount.
+// Event listener for feeding button click and increast health by an RNG amount for each animal type.
 document.getElementById("feed").addEventListener("click", function(event){
+  let elephantFeed = Math.floor(Math.random() * 16) + 10;
+  let giraffeFeed = Math.floor(Math.random() * 16) + 10;
+  let monkeyFeed = Math.floor(Math.random() * 16) + 10;
   animalArray.forEach(function(animal){
-    animal.eat();
+    switch (animal.type){
+      case "elephant":
+        animal.health = animal.health + elephantFeed;
+      break;
+      case "giraffe":
+        animal.health = animal.health + giraffeFeed;
+      break;
+      case "monkey":
+        animal.health = animal.health + monkeyFeed;
+      break;
+    }
     if(animal.health>100){
       animal.health = 100;
     }
@@ -43,9 +56,6 @@ const animal = {
   depleteHealth: function(){
     this.health = this.health - Math.floor(Math.random() * 21);
   },
-  eat: function(){
-    this.health = this.health + Math.floor(Math.random() * 16) + 10 ;
-  }
 };
 
 // Starts the game.

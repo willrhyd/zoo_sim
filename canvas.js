@@ -20,8 +20,9 @@ canvas.height = h;
 sky.width = w;
 sky.height = h;
 
+// Draw the static scene on the canvas
 drawStatics();
-//
+
 // function init(duration){
 //   var requestID;
 //   var startTime = null;
@@ -86,6 +87,7 @@ function drawLeftPath() {
   leftPath.lineTo(45 * w / 100, 55 * h / 100);
   ctx.fill(leftPath);
 }
+
 function drawRightPath() {
   let rightPath = new Path2D();
   rightPath.moveTo(55 * w / 100, 50 * h / 100);
@@ -94,6 +96,7 @@ function drawRightPath() {
   rightPath.lineTo(55 * w / 100, 55 * h / 100);
   ctx.fill(rightPath);
 }
+
 function drawCentralPath() {
   let centralPath = new Path2D();
   centralPath.moveTo(45 * w / 100, h / 2);
@@ -151,6 +154,7 @@ function loadAndDrawImage(url, x, y, skewX, skewY) {
   image.src = url;
 }
 
+// Series of calls to "loadAndDrawImage" to put the fences up
 function drawFences() {
   loadAndDrawImage("public/fence.svg", 0, 50 * h / 100 - 180, 0, 0);
   loadAndDrawImage("public/fence.svg", 0, 90 * h / 100 - 180, 0, 0);
